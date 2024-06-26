@@ -11,7 +11,7 @@ import LoginPage from "./page/LoginPage";
 import SignupPage from "./page/SignupPage";
 import StratagemDetails from "./page/StratagemDetails";
 import StratagemList from "./page/StratagemList";
-import StratagemEditPage from "./page/StratagemEditPage";
+
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -43,10 +43,7 @@ function App() {
             path="/stratagems/:stratagemId"
             element={<StratagemDetails />}
           />
-          <Route
-            path="/stratagems/:stratagemId/edit"
-            element={<StratagemEditPage />}
-          />
+
           <Route path="/stratagems/add" element={<CreateStratagem />} />
           <Route element={<IsNotLoggedIn />}>
             <Route path="/signup" element={<SignupPage></SignupPage>} />

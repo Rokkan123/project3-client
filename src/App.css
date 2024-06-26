@@ -11,13 +11,24 @@ nav > * {
 }
 
 body {
-  @apply bg-amber-100;
+  @apply bg-blue-950;
 }
 
 .links {
-  @apply hover:scale-125 hover:text-slate-300 transition-all ease-in-out;
+  @apply hover:scale-125 hover:text-yellow-300 transition-all ease-in-out;
 }
 
 .btn {
-  @apply p-2  border-2 rounded-lg font-semibold border-stone-300 text-center hover:bg-slate-400 transition-all;
+  @apply p-2  border-2 rounded-lg font-semibold border-yellow-400 text-center hover:bg-yellow-600 transition-all;
+}
+
+label{
+  @apply text-white
+}
+
+input{
+  @apply bg-yellow-600
+}
+select {
+  @apply bg-yellow-600
 }

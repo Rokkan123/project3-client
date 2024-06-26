@@ -36,7 +36,7 @@ function StratagemProvider({ children }) {
 
   const updateStratagem = async (body, id, toggle) => {
     try {
-      const response = await api.put("/stratagem/" + id, body);
+      const response = await api.put("/stratagems/" + id, body);
 
       if (response.status === 200 || response.status === 201) {
         toast.success(response.data.updated.name + " was updated succesfully");
@@ -53,7 +53,7 @@ function StratagemProvider({ children }) {
     try {
       const check = confirm("Are you sure you want to delete this stratagem?");
       if (check) {
-        const response = await api.delete("/stratagem/" + id);
+        const response = await api.delete("/stratagems/" + id);
 
         if (response.status === 200) {
           toast.success("stratagem deleted succesfully");
