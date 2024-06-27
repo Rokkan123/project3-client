@@ -11,6 +11,7 @@ import LoginPage from "./page/LoginPage";
 import SignupPage from "./page/SignupPage";
 import StratagemDetails from "./page/StratagemDetails";
 import StratagemList from "./page/StratagemList";
+import TraitorofSuperEarth from "./page/TraitorofSuperEarth";
 
 import { Toaster } from "react-hot-toast";
 
@@ -50,6 +51,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
           </Route>
           <Route path="/about" element={<About />} />
+          <Route path="/traitor" element={<TraitorofSuperEarth />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
         <Footer />

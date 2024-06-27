@@ -2,6 +2,7 @@ import toast from "react-hot-toast";
 import api from "../services/api";
 import { useContext } from "react";
 import { StratagemContext } from "../context/stratagem.context";
+import { useNavigate } from "react-router-dom";
 
 function ReviewCard({ review, user }) {
   const { getAllStratagems } = useContext(StratagemContext);
@@ -20,6 +21,7 @@ function ReviewCard({ review, user }) {
       console.log(error);
     }
   };
+  const navigate = useNavigate();
   return (
     <article className="p-6 text-base bg-white rounded-lg dark:bg-stone-700 w-[50vw]">
       <footer className="flex justify-between items-center mb-2">
@@ -27,8 +29,8 @@ function ReviewCard({ review, user }) {
           <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
             <img
               className="mr-2 w-6 h-6 rounded-full"
-              src="https://assets-global.website-files.com/642d682a6e4ca0d303c81fdf/65155692e2dc9f25a8fa90a5_ezgif.com-resize.webp"
-              alt="Michael Gough"
+              src={review.creator.image}
+              alt="missing image"
             />
             {review.creator.username} {"⭐".repeat(review.rating)}
           </p>
@@ -49,6 +51,39 @@ function ReviewCard({ review, user }) {
       {user && user._id === review.creator._id && (
         <button onClick={() => handleDelete(review._id)}>🗑️</button>
       )}
+
+      <div className="text-end text-color-yellow-400">
+        <button
+          className="regularhover1 mt-6 "
+          onClick={async function likeComment() {
+            try {
+              const id = review._id;
+              const response = await api.patch(`/review/like/${id}`);
+              console.log(response);
+              toast.success("Liked/Unliked");
+            } catch (error) {
+              console.log(error);
+            }
+            window.location.reload(false);
+          }}
+        >
+          👍
+        </button>{" "}
+        {review.likes ? (
+          <span className="text-white">{review.likes.length}</span>
+        ) : (
+          <span className="text-white">0</span>
+        )}{" "}
+        <button
+          className="navbutton"
+          onClick={() => {
+            navigate(`/traitor`);
+          }}
+        >
+          👎
+        </button>
+        <span className="text-white">0</span>
+      </div>
     </article>
   );
 }

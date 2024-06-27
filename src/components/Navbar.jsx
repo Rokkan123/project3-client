@@ -16,14 +16,14 @@ function Navbar() {
           STRATAGEMS
         </Link>
         <Link to="/about" className="links">
-          about
+          ABOUT
         </Link>
       </div>
 
       {user && user.isAdmin && (
         <div className="center">
           <Link className="btn" to="/stratagems/add">
-            Create a STRATAGEM
+            CREATE A STRATAGEM
           </Link>
         </div>
       )}
@@ -31,16 +31,16 @@ function Navbar() {
       {user ? (
         <div className="center gap-4 p-4">
           <button onClick={logout} className="btn">
-            logout
+            LOGOUT
           </button>
         </div>
       ) : (
         <div className="center gap-4 p-4">
           <Link to="/signup" className="btn">
-            sign up
+            SIGN UP
           </Link>
           <Link to="/login" className="btn">
-            log in
+            LOGN IN
           </Link>
         </div>
       )}

@@ -35,19 +35,20 @@ function ReviewForm() {
 
   return (
     <form className="center flex-col" onSubmit={handleSubmit}>
-      <label htmlFor="title">title:</label>
+      <label htmlFor="title">Title:</label>
       <input
         type="text"
         name="title"
         onChange={handleChange}
         value={review.title}
       />
-      <label htmlFor="review">review:</label>
+      <label htmlFor="review">Review:</label>
       <input
         type="text"
         name="review"
         onChange={handleChange}
         value={review.review}
+        className=""
       />
       <label htmlFor="rating">rating:</label>
       <StarRatings
@@ -61,7 +62,7 @@ function ReviewForm() {
         starRatedColor="rgb(154 52 18)"
         starHoverColor="rgb(152 55 11)"
       />
-      <button type="submit" className="btn">
+      <button type="submit" className="btn text-white">
         review!
       </button>
     </form>

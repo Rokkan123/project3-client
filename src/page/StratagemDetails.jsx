@@ -19,7 +19,9 @@ function StratagemDetails() {
   }, [stratagems]);
   return (
     <div className="center flex-col gap-6 mb-8">
-      <h2 className="text-3xl font-semibold m-6">Stratagem Details</h2>
+      <h2 className="text-yellow-400 drop-shadow-[0_8.2px_5.2px_rgba(0,0,0,0.8)] text-3xl font-Insignia Regular m-5">
+        Stratagem Details
+      </h2>
       {stratagem ? (
         <StratagemDetailsCard stratagem={stratagem} />
       ) : (

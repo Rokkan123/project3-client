@@ -24,7 +24,7 @@ function EditForm({ toggleEdit, setToggleEdit }) {
 
   return (
     currStratagem && (
-      <div className="max-w-lg mx-auto bg-gray rounded-xl overflow-hidden shadow-lg">
+      <div className="max-w-lg mx-auto bg-gray-950 rounded-xl overflow-hidden shadow-lg">
         <div className="p-6">
           <h2 className="text-xl font-semibold text-white-800 mb-2">
             Edit Stratagem

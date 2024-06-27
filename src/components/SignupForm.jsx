@@ -16,7 +16,7 @@ function SignupForm() {
 
   return (
     <form
-      className="center flex-col p-8 border-2 border-stone-300 m-10 rounded-lg"
+      className="center flex-col p-8 border-2 border-stone-300 m-10 rounded-lg bg-zinc-800"
       onSubmit={(e) => {
         e.preventDefault();
         signup(signupInfo);
@@ -45,7 +45,7 @@ function SignupForm() {
         value={signupInfo.password}
         onChange={handleChange}
       />
-      <button type="submit" className="btn mt-4">
+      <button type="submit" className="btn mt-4 text-white">
         register now
       </button>
     </form>

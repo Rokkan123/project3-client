@@ -11,7 +11,7 @@ nav > * {
 }
 
 body {
-  @apply bg-blue-950;
+  @apply bg-blue-950 bg-url bg-cover bg-no-repeat  ;
 }
 
 .links {
@@ -32,3 +32,4 @@ input{
 select {
   @apply bg-yellow-600
 }
+
