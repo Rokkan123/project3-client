@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import About from "./page/About";
 import CreateStratagem from "./page/CreateStratagem";
 import ErrorPage from "./page/ErrorPage";
-import Homepage from "./page/homepage";
+import Homepage from "./page/Homepage";
 import LoginPage from "./page/LoginPage";
 import SignupPage from "./page/SignupPage";
 import StratagemDetails from "./page/StratagemDetails";
