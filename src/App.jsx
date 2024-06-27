@@ -12,7 +12,6 @@ import SignupPage from "./page/SignupPage";
 import StratagemDetails from "./page/StratagemDetails";
 import StratagemList from "./page/StratagemList";
 import TraitorofSuperEarth from "./page/TraitorofSuperEarth";
-
 import { Toaster } from "react-hot-toast";
 
 function App() {
